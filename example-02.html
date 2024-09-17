@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documento</title>
+    <style>
+      #container {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>List of Products</h1>
+    <hr />
+    <div id="container">
+      <div>
+        <input
+          id="options"
+          list="product-type"
+          name="type"
+          onchange="printInOrder()"
+        />
+        <datalist id="product-type">
+          <option value="beauty">beauty</option>
+          <option value="fragrances">fragrances</option>
+        </datalist>
+        <select name="order" id="inputValue" onchange="printInOrder()">
+          <option value="forId">not sort</option>
+          <option value="forPrice">for price</option>
+          <option value="forStock">for stock</option>
+          <option value="forDiscountPercentage">for discount percentage</option>
+          <option value="forRating">for rating</option>
+        </select>
+      </div>
+      <div id="imageContainer"></div>
+    </div>
+    <script src="./example-02.js"></script>
+  </body>
+</html>
